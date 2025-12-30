@@ -63,8 +63,6 @@ employSchema.statics.findByCredential  = async function ( name , password){
 
 }
 
-
-
 const employ = mongoose.model("employ",employSchema)
 
 export default employ

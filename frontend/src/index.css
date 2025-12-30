@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+.floating-input {
+  position: relative;
+}
+
+.floating-input input {
+  width: 100%;
+  height: 48px;
+  background: transparent;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 0 14px;
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+.floating-input label {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 13px;
+  pointer-events: none;
+  transition: 0.3s ease;
+  background: #111827;
+  padding: 0 6px;
+}
+
+.floating-input input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.floating-input input:focus + label,
+.floating-input input:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 11px;
+  color: #818cf8;
+}
